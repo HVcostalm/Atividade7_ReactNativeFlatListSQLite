@@ -1,0 +1,1 @@
+export { ProdutoListScreen as default } from "./produtolist";
