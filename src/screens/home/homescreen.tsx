@@ -21,7 +21,7 @@ export function HomeScreen() {
        </ThemedView>
 
        <ThemedView style={styles.footerContainer}>
-          <Button label="Produto" iconame="save" theme="primary" onPress={()=>setIsRegisterModalVisible(true)} />
+          <Button label="Adicionar Produto" iconame="save" theme="primary" onPress={()=>setIsRegisterModalVisible(true)} />
        </ThemedView>
 
       <RegisterScreen visible={isRegisterModalVisible} handleClose={onRegisterModalClose} />
