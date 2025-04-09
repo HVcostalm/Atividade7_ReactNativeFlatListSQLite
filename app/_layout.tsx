@@ -5,7 +5,7 @@ import { SQLiteProvider, openDatabaseSync } from 'expo-sqlite';
 import { drizzle } from 'drizzle-orm/expo-sqlite';
 import { useMigrations } from 'drizzle-orm/expo-sqlite/migrator';
 import migrations from '@/drizzle/migrations';
-import UserProvider from '@/src/state/produto';
+import ProdutoProvider from '@/src/state/produto';
 import { DATABASE_NAME } from '@/src/db/schema';
 
 export default function RootLayout() {
@@ -33,11 +33,11 @@ export default function RootLayout() {
       <SQLiteProvider databaseName={DATABASE_NAME}
         options={{ enableChangeListener: true }}
         useSuspense>
-        <UserProvider>
+        <ProdutoProvider>
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           </Stack>
-        </UserProvider>
+        </ProdutoProvider>
       </SQLiteProvider>
     </Suspense>
   );
